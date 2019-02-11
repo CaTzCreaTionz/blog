@@ -1,3 +1,133 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-font-stack: Helvetica, sans-serif;
+$primary-color: #5ce1e6; // turqoise
+$complement-color: #ff914d; // lightsalmon
+$grayscale-color: #c9c9c9;
+$font-color: #34495e;
+
+body {
+  background-color: white;
+  color: $font-color !important;
+  font: 100% $primary-font-stack;
+  line-height: 1.5em;
+}
+
+//article-overview
+.content-articles {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 6em;
+  margin-bottom: 1em;
+}
+
+.col-article {
+  margin-bottom: 1em;
+  padding-top: .7em;
+  padding-bottom: 1em;
+}
+
+.article-img {
+  max-width: 20% !important;
+  max-height: auto !important;
+  float: right;
+  padding: 1em 0;
+}
+
+.col-article h6 {
+  margin-bottom: 0 !important;
+}
+
+.col-article p {
+  padding-top: 1em;
+}
+.article-content {
+  padding-top: 1em;
+}
+
+.articles-overview-main a {
+  color: $font-color;
+}
+
+.articles-overview-main a:hover {
+  text-decoration: none !important;
+  color: $primary-color !important;
+}
+//end articles-overview
+
+//article show
+.content-show-article {
+  width: 100% !important;
+  margin: 0 auto;
+  margin-top: 5em !important;
+  margin-bottom: 2em !important;
+}
+
+.show-article-main {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+}
+
+.article-show {
+  width: 100%;
+  padding: 1em;
+}
+
+.show-article-main h3 {
+  padding: .5em;
+}
+
+.show-article-main h5 {
+  padding: 0 .8em .5em .9em;
+}
+
+.show-article-main h6 {
+  padding: 0 .8em .2em 1em;
+  margin: 0 !important;
+}
+.show-article-main p {
+  padding: .5em .8em .2em .8em;
+}
+
+@media only screen and (min-width: 768px) {
+  .content-show-article {
+    width: 60% !important;
+    margin: 0 auto;
+  }
+}
+//end article show
+
+//article-new
+.content-new-article {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 6em;
+  margin-bottom: 1em;
+}
+//end articles-new
+
+//article-edit
+.content-edit-article {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 6em;
+  margin-bottom: 1em;
+}
+//end articles-edit
+
+// articles form
+.container-fluid-form h5 {
+  margin-bottom: .2 !important;
+  line-height: .5em !important;
+}
+
+.form-control * {
+  width: 100%;
+}
+
+.article-form {
+ margin-bottom: 2em;
+}
+//end articles form

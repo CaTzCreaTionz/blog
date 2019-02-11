@@ -1,25 +1,20 @@
-<p id="notice"><%= notice %></p>
+<section class="content-articles">
 
-<h1>Articles</h1>
+  <div class="container-fluid articles-overview-main">
+    <div class="row article-overview">
+      <% @articles.each do |article| %>
+        <div class="col-12 col-article">
+          <%= link_to image_tag(article.image_url, class: "article-img"), article_path(article.id) %>
+          <h3><strong><%= link_to article.title, article_path(article.id) %></strong></h3>
+          <h6><strong>Author: <%=article.author %></strong></h6>
+          <h6><strong><%=article.date %> ~ <%=article.readtime %></strong></h6>
+          <p><%=article.description%></p>
+          <p><strong><%= link_to 'Read full article', article %></strong></p>
+        </div><!-- /col -->
+      <% end %>
+    </div> <!-- end row -->
+  </div> <!-- end container article-overview -->
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+  <br>
+  <%= link_to 'New Article', new_article_path %>
+</section>

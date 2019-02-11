@@ -1,17 +1,72 @@
-<%= form_with(model: article, local: true) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+<section class="container-fluid-form">
+  <div class="form-main">
+    <%= form_with(model: article, local: true) do |form| %>
+      <% if article.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
-      <ul>
-      <% article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% article.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="row new-article-row1">
+        <div class="col-12 form-group">
+          <h5><%= form.label :title %></h5>
+          <div class="col-12 article-form">
+          <%= form.text_field :title, class: "form-control" %>
+          </div>
+        </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+        <div class="col-12 form-group">
+          <h5><%= form.label :description %></h5>
+          <div class="col-12 form-group">
+          <%= form.text_area :description, rows: "3", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-12 form-group">
+          <h5><%= form.label :date %></h5>
+          <div class="col-12 form-group">
+          <%= form.text_field :date, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-12 form-group">
+          <h5><%= form.label :author %></h5>
+          <div class="col-12 form-group">
+          <%= form.text_field :author, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-12 form-group">
+          <h5><%= form.label :readtime %></h5>
+          <div class="col-12 form-group">
+          <%= form.text_field :readtime, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-12 form-group">
+          <h5><%= form.label :image_url %></h5>
+          <div class="col-12 form-group">
+          <%= form.text_field :image_url %>
+          </div>
+        </div>
+
+        <div class="col-12 form-group">
+          <h5><%= form.label :content %></h5>
+          <div class="col-12 form-group">
+          <%= form.text_area :content, rows: "15", class: "form-control" %>
+          </div>
+        </div>
+      </div> <!-- end row -->
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+
+    <% end %>
+  </div> <!-- end form main-->
+</section>

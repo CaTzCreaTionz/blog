@@ -1,3 +1,83 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-font-stack: Helvetica, sans-serif;
+$primary-color: #5ce1e6; // turqoise
+$complement-color: #ff914d; // lightsalmon
+$grayscale-color: #c9c9c9;
+$font-color: #34495e;
+
+body {
+  background-color: white;
+  color: $font-color;
+  font: 100% $primary-font-stack;
+  line-height: 1.5em;
+}
+
+//Navigation
+.navbar {
+  width: 100%;
+  background-color: white !important;
+}
+
+.logo-image {
+  max-height: 3.6em;
+  width: auto;
+}
+
+nav li a {
+  color: black !important;
+}
+
+nav li a:hover {
+  color: $primary-color !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 500ms ease;
+  -webkit-transition: 500ms ease;
+}
+//end navigation
+
+//footer
+.footer-section {
+  background-color: $primary-color;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.footer-copyright p {
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+}
+//end footer
+
+//about
+.content-about {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5.5em;
+  margin-bottom: 1em;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+}
+//end about
+
+//contact
+.contact-content {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 7em;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.contact-content h5 {
+  padding-bottom: 1em;
+}
+//end contact
