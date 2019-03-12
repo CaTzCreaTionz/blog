@@ -80,4 +80,25 @@ nav li a:hover {
 .contact-content h5 {
   padding-bottom: 1em;
 }
+
+#contactrow1 h5 {
+  color: $primary-color !important;
+}
 //end contact
+
+//thank you
+.content-thank-you {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 6em;
+  margin-bottom: 2em;
+}
+
+#thank-you-hero {
+ padding: 0;
+ margin-bottom: 1em;
+}
+
+.thank-you-image {
+  width: 100%;
+}

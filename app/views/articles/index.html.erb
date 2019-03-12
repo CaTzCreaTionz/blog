@@ -10,11 +10,23 @@
           <h6><strong><%=article.date %> ~ <%=article.readtime %></strong></h6>
           <p><%=article.description%></p>
           <p><strong><%= link_to 'Read full article', article %></strong></p>
+          <% if signed_in? %>
+            <%= link_to 'New Article', new_article_path, class: "btn btn-info" %>
+            <%= link_to 'Edit', edit_article_path(article), class:"btn btn-warning" %>
+          <% end %>
+
+          <% if signed_in? && current_user.admin? %>
+            <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+          <% end %>
+          <hr>
         </div><!-- /col -->
       <% end %>
     </div> <!-- end row -->
   </div> <!-- end container article-overview -->
 
   <br>
-  <%= link_to 'New Article', new_article_path %>
+  <%= will_paginate @articles %>
+
+
+
 </section>

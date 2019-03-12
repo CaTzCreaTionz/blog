@@ -6,10 +6,12 @@
     <h6><strong>Author: <%= @article.author %></strong></h6>
     <h6><strong><%= @article.date %> ~ <%= @article.readtime %></strong></h6>
     <%= image_tag(@article.image_url, class: "article-show") %>
-    <p><%= @article.content %></p>
+    <p><%= @article.content.html_safe %></p>
+    <hr>
   </div> <!-- end show article main -->
 
-	<%= link_to 'Edit', edit_article_path(@article) %>
-	<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= render 'comments' %>
+  <%= will_paginate @comments %>
+  <%= render 'new_comment' %>
 
 </section> <!-- end content-show-article -->

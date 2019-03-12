@@ -1,0 +1,10 @@
+<div class="article-new-reviews">
+  <% if signed_in? %>
+    <%= form_for([@article, @article.comments.build]) do |f| %>
+    <div class="md-form">
+      <%= f.text_area :body, class: "form-control", placeholder: "Please write your comments here", rows: "5" %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-outline-info" %>
+    <% end %>
+  <% end %>
+</div>

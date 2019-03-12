@@ -14,4 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require ckeditor/init
 //= require_tree .
+
+$(document).on('turbolinks:load', function(){
+  $(".alert").delay(4000).fadeOut("ease");
+});

@@ -1,0 +1,87 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-font-stack: Helvetica, sans-serif;
+$primary-color: #5ce1e6; // turqoise
+$complement-color: #ff914d; // lightsalmon
+$grayscale-color: #c9c9c9;
+$font-color: #34495e;
+
+.article-reviews {
+  margin-left: 2em;
+}
+
+.article-new-reviews {
+  margin: 2em;
+}
+
+.pagination {
+  background: white;
+  cursor: default;
+  margin-left: 1em;
+}
+
+.pagination a,
+.pagination span,
+.pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+.pagination .disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: $primary-color;
+  color: white;
+  border: 1px solid $primary-color;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: $font-color;
+  border: 1px solid grey;
+}
+
+.pagination a:hover, .pagination a:focus {
+  color: white;
+  border-color: $complement-color !important;
+  background: $complement-color !important;
+}
+
+.pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+
+.pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .pagination {
+  height: 1%;
+}
+
+*:first-child + html .pagination {
+  overflow: hidden;
+}

@@ -6,37 +6,24 @@
   <div class="row" id="contactrow1">
     <div class="col-12">
       <p>If you have any comments or you would like to make a contribution to this blog page, please send us an email:</p>
-      <h5><strong><i class="fas fa-envelope"></i>  info@code-chatter.com
+      <h5><strong><i class="fas fa-envelope"></i> info@code-chatter.com
       </strong></h5>
       <p>You can also leave us a message below.</p>
-      <form>
-        <div class="form-row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name">
-            </div> <!-- end name -->
-          </div> <!-- end col1 -->
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="number">Telephone number</label>
-              <input type="tel" class="form-control" id="telephone" placeholder="Enter your telephone number">
-            </div> <!-- end number -->
-          </div> <!-- end col2 -->
-        </div> <!-- end row  -->
 
-        <div class="form-group">
-          <label for="email">Email*</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
-        </div> <!-- end email -->
-
-        <div class="form-group">
-          <label for="message">Message*</label>
-          <textarea class="form-control message-box" id="message" style="resize: none" cols="40" rows="5" placeholder="Type your message" required></textarea>
-        </div> <!-- end message -->
-
-        <button type="submit" id="button" class="btn btn-secondary">Submit</button>
-      </form> <!-- end form -->
+      <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+      <div class="form-row">
+        <div class="col-md-6 form-group">
+          <p><%= form.text_field :name, class: "form-control", placeholder: "Enter Name", required: true %></p>
+        </div> <!-- end col -->
+        <div class="col-md-6 form-group">
+          <p><%= form.text_field :email, class: "form-control", placeholder: "Enter Email", required: true, validates: :email %></p>
+        </div> <!-- end col -->
+        <div class="col-md-12 form-group">
+          <p><%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5, required: true %></p>
+        </div> <!-- end col -->
+      </div> <!-- end form-row -->
+      <p><%= form.submit "Send", class: "form_label" %></p>
+      <% end %>
     </div> <!-- end col 2 -->
   </div> <!-- end row1 -->
 </section> <!-- end container-contact-->
