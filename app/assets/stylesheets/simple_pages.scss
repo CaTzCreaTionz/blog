@@ -8,11 +8,18 @@ $complement-color: #ff914d; // lightsalmon
 $grayscale-color: #c9c9c9;
 $font-color: #34495e;
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: white;
   color: $font-color;
   font: 100% $primary-font-stack;
   line-height: 1.5em;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 4em;
 }
 
 //Navigation
@@ -41,11 +48,11 @@ nav li a:hover {
 
 //footer
 .footer-section {
+  width: 100%;
   background-color: $primary-color;
   color: black;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-copyright p {
@@ -60,7 +67,6 @@ nav li a:hover {
   width: 70%;
   margin: 0 auto;
   margin-top: 5.5em;
-  margin-bottom: 1em;
   font-weight: 400;
   font-size: 21px;
   line-height: 1.58;

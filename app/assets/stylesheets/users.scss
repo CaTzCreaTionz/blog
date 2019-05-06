@@ -1,6 +1,33 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-font-stack: Helvetica, sans-serif;
+$primary-color: #5ce1e6; // turqoise
+$complement-color: #ff914d; // lightsalmon
+$grayscale-color: #c9c9c9;
+$font-color: #34495e;
+
+//users
+
+.content-user {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 6em;
+  margin-bottom: 1em;
+}
+
+.sign-in {
+  width: 40% !important;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  margin-top: 6.5em;
+}
+
+.md-form {
+  margin-bottom: .5em;
+}
+
 .form-elegant .font-small {
   font-size: 0.8rem; }
 
@@ -13,22 +40,4 @@
 .form-elegant .btn:hover {
   -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
   box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
-}
-
-.sign-in {
-  width: 40% !important;
-  margin: 0 auto;
-  margin-top: 6.5em;
-  margin-bottom: 2em;
-}
-
-.md-form {
-  margin-bottom: .5em;
-}
-
-.users {
-  width: 80% !important;
-  margin: 0 auto;
-  margin-top: 6.5em;
-  margin-bottom: 2em;
 }
